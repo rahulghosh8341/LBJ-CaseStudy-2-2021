@@ -1,4 +1,8 @@
-# LBJ-Case-Study-2
+# LBJ-Case-Study-2<br>
+
+A Web application which can read data from a .csv file and perform various
+operations like add a new student data to .csv file, search for a particular student
+data, display all records from the csv file.
 
 ## Technologies Used
   FrontEnd -  HTML, CSS, JavaScript<br>
