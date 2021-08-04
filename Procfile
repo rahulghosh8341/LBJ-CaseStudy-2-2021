@@ -1,0 +1,1 @@
+web: gunicorn casestudy2.wsgi --log-file -

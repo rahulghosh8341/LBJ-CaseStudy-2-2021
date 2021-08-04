@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>
+    LBJ Case Study - 2
+  </title>
+  <link rel="icon" href="https://media.glassdoor.com/sqll/30653/lti-squarelogo-1527249758749.png" type="image/x-icon">
+  <link rel="stylesheet"
+    href="https://res.cloudinary.com/hmvbhgfqs/raw/upload/v1627987350/LBJ%20casestudy%202/style_dgxvof.css" />
+  <link rel="stylesheet"
+    href="https://res.cloudinary.com/hmvbhgfqs/raw/upload/v1627985462/LBJ%20casestudy%202/style_d9yv3v.css" />
+  <style>
+    a {
+      color: inherit;
+    }
+
+    a:link {
+      text-decoration: none;
+    }
+
+
+    a:visited {
+      text-decoration: none;
+    }
+
+    a:active {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="slide-menu">
+    <ul>
+      <li>
+        <a href="/">
+          <h2>Home</h2>
+        </a>
+      </li>
+      <hr />
+      <br>
+      <li class="add"><a href="add-student">Add new Student</a></li>
+      <li class="search">
+        <a href="search-student">Search for a Student</a>
+      </li>
+      <li class="display"><a href="display-student">Display Students</a></li><br>
+      <hr />
+    </ul>
+  </nav>
+  <!-- Content panel -->
+  <div id="content">
+    <div class="menu-trigger"></div>
+
+    <!-- partial:index.partial.html -->
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+
+      <title>Slider</title>
+    </head>
+
+    <body>
+      <div class="container">
+        <div class="slider">
+          <div class="box1 box">
+            <div class="bg"></div>
+            <div class="details">
+              <h1 style="font-weight: bold;color: #fff;font-size: 40px;">Student Management</h1> <br>
+              <p style="font-weight:  bold;font-size: 15px">
+                A web application which can read data from a .csv file
+                and perform various operations mentioned below.<br>
+                &emsp;1) Add new Student data to the csv file<br>
+                &emsp;2) Search Student info based on Student ID <br>
+                &emsp;3) Display information of all student from the csv file.<br>
+              </p>
+            </div>
+
+            <div class="illustration">
+              <div class="inner"></div>
+            </div>
+          </div>
+
+          <div class="box2 box">
+            <div class="bg"></div>
+            <div class="details">
+              <h1 style="font-weight: bold;color: #fff;font-size: 40px;">Want to add a new Student?</h1><br>
+              <p style="font-weight:  bold;font-size: 15px">
+                Fill the details of the student to directly save it to the .csv file.<br>
+                You can also use the menu to reach to the "Add new Student" page.
+              </p>
+              <button><a href="add-student">Check Now</a></button>
+            </div>
+
+            <div class="illustration">
+              <div class="inner"></div>
+            </div>
+          </div>
+
+          <div class="box3 box">
+            <div class="bg"></div>
+            <div class="details">
+              <h1 style="font-weight: bold;color: #fff;font-size: 34px;">Need data of a particular student?</h1><br>
+              <p style="font-weight:  bold;font-size: 15px;color: #fff;">
+                Just search for the student details by using the student ID. <br>
+              </p>
+              <button><a href="search-student">Check Now</a></button>
+            </div>
+
+            <div class="illustration">
+              <div class="inner"></div>
+            </div>
+          </div>
+
+          <div class="box4 box">
+            <div class="bg"></div>
+            <div class="details">
+              <h1 style="font-weight: bold;color: #fff;font-size: 37px;">Require details of all students?</h1><br>
+              <p style="font-weight:  bold;font-size: 15px">
+                Just navigate to "Display Students" page. All the details of the students will be listed below.
+              </p>
+              <button><a href="display-student">Check Now</a></button>
+            </div>
+
+            <div class="illustration">
+              <div class="inner"></div>
+            </div>
+          </div>
+
+          <div class="box5 box">
+            <div class="bg"></div>
+            <div class="details">
+              <h1 style="font-weight: bold;color: #fff;font-size: 40px;">Github Repo</h1><br>
+              <button><a href="https://github.com/rahulghosh8341/LBJ-CaseStudy-2-2021">Check out</a></button>
+            </div>
+
+            <div class="illustration">
+              <div class="inner"></div>
+            </div>
+          </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="prev" width="56.898" height="91" viewBox="0 0 56.898 91">
+          <path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="next" width="56.898" height="91" viewBox="0 0 56.898 91">
+          <path d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff" />
+        </svg>
+        <div class="trail">
+          <div class="box1 active">1</div>
+          <div class="box2">2</div>
+          <div class="box3">3</div>
+          <div class="box4">4</div>
+          <div class="box5">5</div>
+        </div>
+      </div>
+      <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+      <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+    </body>
+
+    </html>
+    <!-- partial -->
+    <script src="https://res.cloudinary.com/hmvbhgfqs/raw/upload/v1627987350/LBJ%20casestudy%202/script_q4rjvt.js">
+    </script>
+  </div>
+  <script>
+    (function () {
+      var $body = document.body,
+        $menu_trigger = $body.getElementsByClassName("menu-trigger")[0];
+
+      if (typeof $menu_trigger !== "undefined") {
+        $menu_trigger.addEventListener("click", function () {
+          $body.className =
+            $body.className == "menu-active" ? "" : "menu-active";
+        });
+      }
+    }.call(this));
+  </script>
+</body>
+
+</html>

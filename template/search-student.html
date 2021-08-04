@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>LTI case-study 2 - Search Student</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://media.glassdoor.com/sqll/30653/lti-squarelogo-1527249758749.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://res.cloudinary.com/hmvbhgfqs/raw/upload/v1627985462/LBJ%20casestudy%202/style_d9yv3v.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    a {
+      color: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="slide-menu">
+    <ul>
+      <li><a href="/">
+          <h2>Home</h2>
+        </a></li>
+      <hr />
+      <br>
+      <li class="add"><a href="add-student">Add new Student</a></li>
+      <li class="search"><a href="search-student">Search for a Student</a></li>
+      <li class="display"><a href="display-student">Display Students</a></li><br>
+      <hr />
+    </ul>
+  </nav>
+  <!-- Content panel -->
+  <div id="content">
+    <div class="menu-trigger"></div>
+
+    <div class="container-fluid">
+      <div class="row-p-5">
+        <div class="col-sm-6">
+          <h1>Search</h1> <br>
+          {% if success %}
+          <div class="alert alert-success alert-dismissible fade in">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>Success!</strong> Record Entered
+          </div>
+          {% endif %}
+          <form action="search-student" method="POST">
+            <div class="form-group">
+              <label for="StudentId">Student ID</label>
+              <input type="text" class="form-control" id="StudentId" name="StudentId" placeholder="Enter Student Id">
+            </div>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="table-responsive">
+      <div class="col">
+        {% if results %}
+        <table class="table table1 table-bordered" id="dataTable" width="100%" cellspacing="0"
+          data-order='[[1, "desc"]]'>
+          <thead>
+            <tr>
+              <th>Student Id</th>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>Date Of Birth</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Email Id</th>
+              <th>Qualification</th>
+              <th>Stream</th>
+            </tr>
+          </thead>
+          {% for record in results %}
+          <tr>
+            <td>{{record.StudentId }}</td>
+            <td>{{record.Name }}</td>
+            <td>{{record.Gender }}</td>
+            <td>{{record.DateOfBirth }}</td>
+            <td>{{record.City }}</td>
+            <td>{{record.State }}</td>
+            <td>{{record.EmailId }}</td>
+            <td>{{record.Qualification }}</td>
+            <td>{{record.Stream }}</td>
+          </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var $body = document.body,
+        $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
+
+      if (typeof $menu_trigger !== 'undefined') {
+        $menu_trigger.addEventListener('click', function () {
+          $body.className = ($body.className == 'menu-active') ? '' : 'menu-active';
+        });
+      }
+
+    }).call(this);
+  </script>
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js">
+  </script>
+  <script>
+    $('.table1').DataTable({
+      responsive: true
+    });
+  </script>
+</body>
+
+</html>
